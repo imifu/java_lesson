@@ -7,7 +7,9 @@ class Main {
 
         System.out.println("Javaの勉強はじめます！");
 
-        
+        System.out.println("進みました");
+
+
 
     }
 }
