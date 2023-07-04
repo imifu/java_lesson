@@ -21,10 +21,11 @@ class Main {
         long b = 369369L; //小数点がない　数字で末尾が　L
         double c = 4.2; //小数点付きの数字
         float d = 4.2F; //小数点付きの数字で末尾が　F
-        boolean e = true false; //true か false
+        boolean e = true; //true か false
         char f = '私'; //引用符で囲まれた文字
         string g = "java"; //二重引用符で囲まれた文字
 
+        System.out.println(a);
 
         
     }
