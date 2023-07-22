@@ -9,12 +9,12 @@ class Main {
 
         System.out.println("コンパイル実行");
 
-        System.out.println(args[0] + "さん");
-        System.out.println("あなたの血液型は" + args[1] + "型で");
-        System.out.println("国籍は" + args[2] + "です");
+        // System.out.println(args[0] + "さん"); /*コマンドラインからパラメーターをわたす事が出来る */
+        // System.out.println("あなたの血液型は" + args[1] + "型で");
+        // System.out.println("国籍は" + args[2] + "です");
 
-        String[] paras = {"りんご","ゴリラ","ラッパ"};
-        alot_of(paras);
+        // String[] paras = {"りんご","ゴリラ","ラッパ"};
+        // alot_of(paras);
 
        // long x = 65536 ;
      
@@ -69,7 +69,8 @@ class Main {
 
     }*/
 
-    /*public static int mathAge(int year,int birth_year){
+    /*
+    public static int mathAge(int year,int birth_year){
 
         int age = year - birth_year;
         return age;
@@ -85,19 +86,15 @@ class Main {
          
         int[] a = {1,2,3,4,5};
         return a;
-    }*/
+    }
 
     public static void alot_of(String[] paras) {
 
         for (int i =0; i < paras.length; i++) {
-            System.out.println(paras[i]);
+            System.out.println("やってみよう" + paras[i]);
         }
     }
-
-
-
-
-
+*/
 
 }
 
