@@ -72,6 +72,7 @@ class Main {
              System.out.println("ゲームを終了します");
 
         }
+        //練習４－
 
     }
 }
