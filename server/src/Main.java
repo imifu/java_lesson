@@ -72,7 +72,28 @@ class Main {
              System.out.println("ゲームを終了します");
 
         }
-        //練習４－
+        //練習４－２
+        int []moneyList={121902,8302,55100};
+        
+        for(int i=0; i<3; i++){
+            System.out.println(moneyList[i]);
+        }
+        for(int m:moneyList){
 
+            System.out.println(m);
+        }
+        //練習４－４
+        int[]numbers={3,4,9};
+        System.out.println("1桁の数字を入力してください");
+        int input=new java.util.Scanner(System.in).nextInt();
+        for(int n:numbers){
+            if(n==input){
+                System.out.println("あたり！");
+            }
+        }
     }
+
+
+
 }
+
