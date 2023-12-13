@@ -16,23 +16,32 @@ public class Main {
    int age; // 年齢を入れる箱
    age = 20;
    System.out.println(age);
-
    System.out.println("私は" + age + "歳です。");
 
    // データ型の種別について
    // 整数の型であれば下記４つ
 
-   byte b; b = 101;  // とても小さい変数
-   short s; s = 3600;  // 小さな変数
-   int i; i = 21000000;  // 普通の変数(基本的にはintを使用することが多い。)
-   long l; l = 900000000;  // 大きな変数
+   byte b;
+   b = 101;  // とても小さい変数
+
+   short s;
+   s = 3600;  // 小さな変数
+
+   int i;
+   i = 21000000;  // 普通の変数(基本的にはintを使用することが多い。)
+
+   long l;
+   l = 900000000;  // 大きな変数
 
    System.out.println(i + b + s + l);
 
    // 少数を扱う型は下記２つ
 
-   float weight; weight  = 67.5F;  // 曖昧でもよい少数
-   double height; height = 171.2;  // 普通の少数（基本的にはdoubleを使用する場合が多い）
+   float weight;
+   weight  = 67.5F;  // 曖昧でもよい少数
+
+   double height;
+   height = 171.2;  // 普通の少数（基本的にはdoubleを使用する場合が多い）
 
    System.out.println(weight);
    System.out.println(height);
@@ -44,13 +53,19 @@ public class Main {
 
    // yesかnoかを収納できる型は下記の１つ
 
-   boolean isError; isError = true;
-   boolean result; result = false;
+   boolean isError;
+   isError = true;
+
+   boolean result;
+   result = false;
 
    // 文字を扱う型は下記の２つ
 
-   char zodiac; zodiac = '颯';  // 一文字だけ収納できる
-   String name; name = "なかむら";  // 文字列を収納できる
+   char zodiac;
+   zodiac = '颯';  // 一文字だけ収納できる
+
+   String name;
+   name = "なかむら";  // 文字列を収納できる
 
    System.out.println(zodiac);
    System.out.println(name);
@@ -66,20 +81,24 @@ public class Main {
    final int AGE = 23;  // これを定数宣言という。また定数名は大文字を使うのが基本。
 
    // 練習問題1-2
-   int vertical = 3; int beside = 5;
+   int vertical = 3;
+   int beside = 5;
    int area = vertical * beside;
    System.out.println("縦幅3横幅5の長方形の面積は、" + area);
 
    // 練習問題1-3
-   boolean execution = true; char player = '駆';
-   double decimal = 3.14; long large = 314159265853979L;
+   boolean execution = true;
+   char player = '駆';
+   double decimal = 3.14;
+   long large = 314159265853979L;
    String text = "ソウシの攻撃！敵に15ポイントのダメージを与えた。";
 
    // エスケープシーケンスを使う。
    System.out.println("私が好きな記号は二重引用符（¥”）です");
 
    // インクリメント演算子
-   int operator; operator = 100;
+   int operator;
+   operator = 100;
    operator++;
    System.out.println(operator); //++や--は他の演算子と一緒には使わないこと。
 
@@ -332,7 +351,132 @@ public class Main {
     }
    System.out.println("数当てゲームを終了します。");
 
-   //明日はここから
+   // 配列変数の宣言
+   int[] scores;
+
+   // 要素の作成と代入
+   scores = new int[5];
+
+   // 配列の数を調べる
+   int nums = scores.length;
+   System.out.println("要素の数：" + nums);
+
+   // 配列の要素に値を代入
+   scores[1] = 30;
+   System.out.println(scores[1]);
+
+   // 配列作成と初期化の省略方法
+   int[] scores1 = new int[] {20,30,40,50,80};
+   int[] scores2 = {22,33,44,55,88};
+
+   // for文を合わせた扱い方
+   int[] scores3 = {20,30,40,50,80,100};
+   int count = 0;
+   for (int i1 = 0; i1 < scores.length; i1++){
+     if (scores3[i1] >= 50){
+       count++;
+      }
+    }
+   System.out.println("50点以上の科目の数は：" + count);
+
+   // 拡張for文
+   int[] scores4 = {20, 30, 40, 50, 80};
+   for (int value : scores){
+     System.out.println(value);
+    }
+
+   // 配列を理解する。
+   int[] arrayA = {1, 2, 3};
+   int[] arrayB;
+   arrayB = arrayA;
+   arrayB[0] = 100;
+   System.out.println(arrayA[0]);
+
+   // ガベージコレクション
+   boolean judge = true;
+   if (judge == true) {
+     int[] array1 = {1, 2, 3,};
+    }
+
+   // 二次元配列の利用
+   int[][] scoresA = new int[2][3];
+   scoresA [0][0] = 40;
+   scoresA [0][1] = 50;
+   scoresA [0][2] = 60;
+   scoresA [1][0] = 80;
+   scoresA [1][1] = 60;
+   scoresA [1][2] = 70;
+   System.out.println(scoresA [1][1]);
+
+   //親配列と子配列の要素数を表示
+   int[][] scoresB = {{40, 50, 60 },{80, 60, 70}};
+   System.out.println(scoresB.length);
+   System.out.println(scoresB[0].length);
+
+   // 練習問題4-1
+   int[] points = new int[4];
+   double[] weights = new double[5];
+   boolean[] answers = new boolean[3];
+   String[] nama1 = new String[3];
+
+   // 練習問題4-2
+   int[] moneyList = {121902, 8302, 55100};
+   for (int i2 = 0; i2 < moneyList.length; i2++) {
+     System.out.println(moneyList[i2]);
+    }
+   for (int m2 : moneyList){
+     System.out.println(m2);
+    }
+
+   // 練習問題4-4
+   int[] numbers = {3, 4, 9};
+   System.out.println("1桁の数字を入力してください");
+   int input = new java.util.Scanner(System.in).nextInt();
+   for (int n1 : numbers){
+     if (n1 == input){
+       System.out.println("当たり");
+      }
+    }
+
+   // メソッドの呼び出し
+
+    System.out.println("メソッドの呼び出します");
+     //hello();
+    System.out.println("メソッドの呼び出しが終わりました");
+
+
+   // 練習問題5-1
+   //introduceOneself();
+
+
+
+
+
+
+
+
 
   }
+
+
+  /*
+  public static void hello(){
+   System.out.println("颯さん、こんばんは");
+  }
+  */
+
+
+  // 練習問題5-1
+  /*
+  public static void introduceOneself(){
+    String name2 = "soushi";
+    int age1 = 22;
+    double height1 = 169.9;
+    char zodiac = '己';
+    System.out.println("私の名前は" + nama2 + "です");
+    System.out.println("歳は" + age1 + "です");
+    System.out.println("身長は" + height1 + "cmです");
+    System.out.println("十二支は" + zodiac + "です");
+  }
+  */
 }
